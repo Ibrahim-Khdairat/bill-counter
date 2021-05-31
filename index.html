@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="" id ="form">
+            <fieldset>
+                <legend>Happiness Resturant</legend>
+                    <br/>
+                <label for="cxName">Costumer Name</label>
+                <input type="text" name ="cxName" id ="cxNname">
+                <br/>
+                <br/>
+                <label for="cxphone">Costumer Phone</label>
+                <input type="text" name ="cxPhone" id ="cxPhone">
+                <br/>
+                <br/>
+
+                <label for="type">Dinner </label>
+                <select name="type" id="type">
+                    <option value="dawalee" >dawalee</option>
+                    <option value="mansaf">mansaf</option>
+                    <option value="maqlubeh">maqlubeh</option>
+                </select>
+               
+                <br/>
+                <br/>
+
+                <label for="size">Dinner Size</label>
+                <select name="size" id="size">
+                    <option value="Small" >Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <br/>
+                <br/>
+
+                <input type="submit" id = "submit">
+
+
+            </fieldset>
+
+
+
+        </form>
+        <div id="tableContainer" >
+            <table id = "cxList" >
+                <thead>
+                <tr>
+                    <th>
+                        Coutumer Name
+                    </th>
+                    <th>
+                        Coutumer Phone
+                    </th>
+                    <th>
+                        Dinner
+                    </th>
+                    <th>
+                        Size
+                    </th>
+                    <th>
+                        Image
+                    </th>
+                    <!-- <th>
+                        Remove Order
+                    </th>
+                     -->
+                    
+                </tr>
+            </thead>
+            <tbody id = "tbody">
+
+            </tbody>
+
+
+            </table>
+
+        </div>
+
+        <div id ="clearContainer">
+            <button id = "clear">Clear Orders</button>
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
