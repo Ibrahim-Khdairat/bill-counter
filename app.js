@@ -2,6 +2,7 @@
 let formEl = document.getElementById('form');
 let tableEl = document.getElementById('cxList');
 let tBody = document.getElementById('tbody');
+let tHeader = document.getElementById('header');
 let clear = document.getElementById('clear');
 
 formEl.addEventListener('submit' , addOrder);
@@ -20,12 +21,12 @@ function ResturnatCx (cxName,cxPhone,type,size)
     this.path = `img/${type}.jpg`;
     orders.push(this);
 }
-
-
 function addOrder (event)
 {
+    tHeader.removeAttribute('hidden');
+    clear.removeAttribute('hidden');
     event.preventDefault();
-
+   
     let coustumer = event.target.cxName.value;
     let cxPhone = event.target.cxPhone.value;
     let foodtype = event.target.type.value;
@@ -100,8 +101,18 @@ function gettingLocallStorage()
     if ( returnedCx !== null )
     {
         orders = returnedCx;
+    //       tHeader.removeAttribute('hidden');
+    // clear.removeAttribute('hidden');
+    // window.location.reload();
+
+    }
+    if ( returnedCx ===null)
+    {
+          tHeader.setAttribute('hidden',"");
+    clear.setAttribute('hidden',"");
     }
     renderCx();
+
 }
 
     gettingLocallStorage();
